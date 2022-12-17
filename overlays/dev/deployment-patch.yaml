@@ -4,3 +4,8 @@ metadata:
   name: rollout-bluegreen
 spec:
   replicas: 4
+  strategy:
+    blueGreen: 
+      activeService: rollout-bluegreen-active
+      previewService: rollout-bluegreen-preview
+      autoPromotionEnabled: true
