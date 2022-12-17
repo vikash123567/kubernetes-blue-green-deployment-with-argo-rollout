@@ -3,14 +3,10 @@ kind: Ingress
 metadata:
   name: ontheair-ingress
 spec:
-    rules:
-      - host: kub-api.com
-        http:
-          paths:
-          - path: /
-            pathType: Prefix
+  rules:
+    - http:
+        paths:
+          - path: /*
             backend:
-              service:
-                name: rollout-bluegreen-active
-                port:
-                  number: 80
+              serviceName: rollout-bluegreen-active
+              servicePort: 80
