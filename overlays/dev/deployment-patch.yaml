@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: rollout-bluegreen
 spec:
-  replicas: 
+  replicas: 4
   template:
     spec:
       containers:
