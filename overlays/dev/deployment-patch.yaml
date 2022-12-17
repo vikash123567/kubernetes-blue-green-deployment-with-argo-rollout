@@ -3,4 +3,12 @@ kind: Rollout
 metadata:
   name: rollout-bluegreen
 spec:
-  replicas: 4
+  replicas: 
+  template:
+    spec:
+      containers:
+      - name: rollouts-demo
+        image: argoproj/rollouts-demo:green
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
