@@ -3,6 +3,8 @@ kind: Kustomization
 
 configurations:
   - https://argoproj.github.io/argo-rollouts/features/kustomize/rollout-transform.yaml
-  
+
 resources:
   - deployment.yaml
+  - active-service.yaml
+  - preview-service.yaml
