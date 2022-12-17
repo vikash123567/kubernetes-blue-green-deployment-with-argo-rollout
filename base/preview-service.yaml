@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: rollout-bluegreen-preview
+  name: kustomize-rollout-bluegreen-preview
 spec:
   selector:
-    app: rollout-bluegreen
+    app: kustomize-rollout-bluegreen
   ports:
   - protocol: TCP
     port: 8080

@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1     
 kind: Rollout  
 metadata:
-  name: rollout-bluegreen
+  name: kustomize-rollout-bluegreen
 spec:
   replicas: 2
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: rollout-bluegreen
+      app: kustomize-rollout-bluegreen
   template:
     metadata:
       labels:
-        app: rollout-bluegreen
+        app: kustomize-rollout-bluegreen
     spec:
       containers:
-      - name: rollouts-demo
+      - name: kustomize-rollouts-demo
         # image: argoproj/rollouts-demo:blue
         # image: argoproj/rollouts-demo:green
         image: argoproj/rollouts-demo:yellow
@@ -23,6 +23,6 @@ spec:
         - containerPort: 8080
   strategy:
     blueGreen: 
-      activeService: rollout-bluegreen-active 
-      previewService: rollout-bluegreen-preview
+      activeService: kustomize-rollout-bluegreen-active 
+      previewService: kustomize-rollout-bluegreen-preview
       autoPromotionEnabled: false

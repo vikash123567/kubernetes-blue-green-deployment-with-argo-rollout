@@ -1,6 +1,6 @@
 apiVersion: argoproj.io/v1alpha1     
 kind: Rollout  
 metadata:
-  name: rollout-bluegreen
+  name: kustomize-rollout-bluegreen
 spec:
   replicas: 4
