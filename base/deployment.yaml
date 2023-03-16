@@ -20,7 +20,7 @@ spec:
         image: nginx:1.18
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 80
   strategy:
     blueGreen: 
       activeService: rollout-bluegreen-active 
