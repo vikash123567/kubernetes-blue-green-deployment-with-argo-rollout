@@ -19,6 +19,13 @@ spec:
         # image: argoproj/rollouts-demo:green
         image: argoproj/rollouts-demo:yellow
         imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "256Mi"
+          limits:
+            cpu: "200m"
+            memory: "512Mi"
         ports:
         - containerPort: 80
   strategy:
