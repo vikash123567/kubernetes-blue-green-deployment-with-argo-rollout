@@ -7,20 +7,12 @@ spec:
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: rollout-bluegreen
-  template:
-    metadata:
-      labels:
-        app: rollout-bluegreen
-    spec:
-      containers:
-      - name: rollouts-demo
-        # image: argoproj/rollouts-demo:blue
-        # image: argoproj/rollouts-demo:green
-        image: nginx:latest
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 8080
+      app: nginx
+  workloadRef: 
+    apiVersion: apps/v1
+    kind: Deployment
+    name: rollout-deploy
+    
   strategy:
     blueGreen: 
       activeService: rollout-bluegreen-active 
