@@ -17,7 +17,7 @@ spec:
       - name: rollouts-demo
         # image: argoproj/rollouts-demo:blue
         # image: argoproj/rollouts-demo:green
-        image: nginx:latest
+        image: jemesbond/angular:v2
         imagePullPolicy: Always
         resources:
           requests:
