@@ -19,6 +19,10 @@ spec:
         # image: argoproj/rollouts-demo:green
         image: nginx:latest
         imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "256Mi"
         ports:
         - containerPort: 8080
   strategy:
