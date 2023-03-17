@@ -7,6 +7,6 @@ spec:
   minReplicas: 2
   scaleTargetRef:
     apiVersion: argoproj.io/v1alpha1
-    kind: Rollout
+    kind: Deployment
     name: rollout-bluegreen
   targetCPUUtilizationPercentage: 10
