@@ -5,7 +5,7 @@ configurations:
   - https://argoproj.github.io/argo-rollouts/features/kustomize/rollout-transform.yaml
 
 resources:
-  - deployment.yaml
+  - rollout.yaml
   - active-service.yaml
   - preview-service.yaml
   - hpa.yaml
