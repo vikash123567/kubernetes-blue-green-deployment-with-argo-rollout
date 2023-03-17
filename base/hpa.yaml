@@ -8,5 +8,5 @@ spec:
   scaleTargetRef:
     apiVersion: argoproj.io/v1alpha1
     kind: Rollout
-    name: 
+    name: rollout-bluegreen
   targetCPUUtilizationPercentage: 10
