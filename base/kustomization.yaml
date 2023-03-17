@@ -6,6 +6,7 @@ configurations:
 
 resources:
   - rollout.yaml
+  - deployment.yaml
   - active-service.yaml
   - preview-service.yaml
   - hpa.yaml
