@@ -7,6 +7,6 @@ spec:
   minReplicas: 2
   scaleTargetRef:
     apiVersion: argoproj.io/v1alpha1
-    kind: Deployment
-    name: rollout-deploy
+    kind: Rollout
+    name: 
   targetCPUUtilizationPercentage: 10
