@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: rollout-bluegreen-active11
+  name: rollout-bluegreen-active
 spec:
   selector:
     app: rollout-bluegreen
