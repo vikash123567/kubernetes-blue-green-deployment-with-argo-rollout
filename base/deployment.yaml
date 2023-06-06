@@ -31,3 +31,11 @@ spec:
       activeService: rollout-bluegreen-active 
       previewService: rollout-bluegreen-preview
       autoPromotionEnabled: false
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+      prePromotionAnalysis:
+        metrics:
+        - name: latency
+          threshold: 500
+          interval: 30s
