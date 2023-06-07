@@ -1,5 +1,5 @@
-namePrefix: dev-
-namespace: dev
+# namePrefix: dev-
+# namespace: dev
 bases:
   - ../../base/job
   - ../../base/nginx
