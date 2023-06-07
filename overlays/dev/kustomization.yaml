@@ -3,5 +3,10 @@
 bases:
   - ../../base/job
   - ../../base/nginx
-patchesStrategicMerge:
-  - deployment-patch.yaml
+images:
+
+- name: nginx
+
+  newTag: 1.8
+# patchesStrategicMerge:
+#   - deployment-patch.yaml
