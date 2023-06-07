@@ -7,7 +7,7 @@ annotations:
     argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/sync-wave: "2"
 spec:
-  replicas: 2
+  replicas: 5
   revisionHistoryLimit: 2
   selector:
     matchLabels:
