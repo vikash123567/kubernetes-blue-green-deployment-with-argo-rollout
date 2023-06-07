@@ -1,6 +1,7 @@
 namePrefix: dev-
 namespace: dev
 bases:
-  - ../../base
+  - ../../base/job
+  - ../../base/nginx
 patchesStrategicMerge:
   - deployment-patch.yaml

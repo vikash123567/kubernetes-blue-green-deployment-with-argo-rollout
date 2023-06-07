@@ -2,6 +2,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout  
 metadata:
   name: rollout-bluegreen
+annotations:
+    argocd.argoproj.io/sync-options: PruneLast=true
+    argocd.argoproj.io/hook: Sync
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   replicas: 2
   revisionHistoryLimit: 2

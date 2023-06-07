@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: dsm-job
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    argocd.argoproj.io/sync-wave: "-1"
+spec:
+  template:
+    spec:
+
+      containers:
+
+      - name: dsm-job
+
+        image: busybox   #your docker image
+
+        command: ["echo", "presync passed"]
+
+      restartPolicy: Never
