@@ -5,6 +5,6 @@ bases:
   - ../../base/nginx
 images:
 - name: nginx
-  newTag: 1.25.0
+  newTag: latest
 # patchesStrategicMerge:
 #   - deployment-patch.yaml
